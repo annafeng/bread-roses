@@ -6,18 +6,40 @@
 	<title>Bread and Roses</title>
 	<link rel="stylesheet" type="text/css" href="style/reset.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 
 	<div id="wrapper">
 
-
 		<div class="video-container">
-			<video src="videos/single-shot/Alberto Reseu0301ndiz La via va Mexico City 2014.mp4" autoplay controls></video>
+
+			<video id="video1" class="video" controls="true" autoplay>
+				<source src="videos/single-shot/Alberto Reseu0301ndiz La via va Mexico City 2014.mp4" autoplay controls>
+			</video>
+
+			<div id="more" class="more-container" style="display: none;">
+				More videos
+			</div>
+
 		</div>
 
 	</div>
+
+	<script type="text/javascript">
+		var vid = document.getElementById('video1');
+
+		vid.addEventListener("ended", hideVideo, false);
+
+		function hideVideo() {
+			var vid = document.getElementById('video1');
+			var more = document.getElementById('more');
+			vid.removeEventListener("ended", hideVideo, false);
+			vid.style.display='none';
+			more.style.display='block';
+		}
+	</script>
 
 </body>
 </html>

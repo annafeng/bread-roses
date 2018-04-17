@@ -1,5 +1,6 @@
 body {
     background-color: black;
+    font-family: sans-serif;
 }
 
 #wrapper {
@@ -30,4 +31,12 @@ video {
 
 .video-container {
 
+}
+
+.more-container {
+    background-color: black;
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+    background-color: blue;
 }
