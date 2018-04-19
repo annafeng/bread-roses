@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style/reset.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<!-- <script type="text/javascript" src="js/script.js"></script> -->
+</head>
+<body>
+
+  <div class="player">
+
+    <video id="video-container" width="500px" controls autoplay>
+        <source src="videos/video1.mp4" id="video-source" type="video/mp4">
+    </video>
+
+  </div>
+
+  <script>
+      var count = 1;
+      var vidContainer = document.getElementById('video-container');
+      var vidSrc = document.getElementById('video-source');
+      vidContainer.addEventListener('ended', myHandler, false);
+
+      function myHandler(e)
+
+      {
+          if(!e)
+          {
+             e = window.event; 
+          }
+          // event is completed
+
+            count++;
+            $(vidSrc).attr('src', "videos/video"+count+".mp4");
+            vidContainer.load();
+            vidContainer.play();
+
+      }
+    </script>
+
+</body>
+</html>

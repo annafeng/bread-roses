@@ -13,31 +13,38 @@
 
 	<div id="wrapper">
 
-		<div class="video-container">
+		<div class="player">
 
-			<video id="video1" class="video" controls="true" autoplay>
+			<video id="video-container" class="video" controls="true" autoplay>
 				<source src="videos/single-shot/Alberto Reseu0301ndiz La via va Mexico City 2014.mp4" autoplay controls>
 			</video>
 
-			<div id="more" class="more-container" style="display: none;">
-				More videos
-			</div>
+				<div id="more-container" style="display: none;">
+					<div class="col-3">
+						<div><img src="images/SINGLESHOT_02.png"></div>
+						<div><img src="images/SINGLESHOT_03.png"></div>
+						<div><img src="images/SINGLESHOT_04.png"></div>
+						<div><img src="images/SINGLESHOT_03.png"></div>
+						<div><img src="images/SINGLESHOT_01.png"></div>
+						<div><img src="images/SINGLESHOT_02.png"></div>
+					</div>
+				</div>
 
-		</div>
+		</div> <!-- end player -->
 
-	</div>
+	</div> <!-- end wrapper -->
 
 	<script type="text/javascript">
-		var vid = document.getElementById('video1');
+		var vid = document.getElementById('video-container');
 
 		vid.addEventListener("ended", hideVideo, false);
 
 		function hideVideo() {
-			var vid = document.getElementById('video1');
-			var more = document.getElementById('more');
+			var vid = document.getElementById('video-container');
+			var more = document.getElementById('more-container');
 			vid.removeEventListener("ended", hideVideo, false);
-			vid.style.display='none';
-			more.style.display='block';
+			vid.style.display = 'none';
+			more.style.display = 'block';
 		}
 	</script>
 
