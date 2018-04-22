@@ -4,25 +4,37 @@ body {
     font-size: 3vw;
 }
 
+video {
+    width: 100%;
+    display: block;
+}
+
 #wrapper {
     width: 100vw;
     height: 100vh;
     /*background-color: blue;*/
 }
 
-video {
+.title-card {
+    color: white;
     width: 100%;
-    display: block;
+    height: 100%;
+    position: absolute;
+    background-color: blue;
 }
 
-.player {
+#player {
     width: 90vmax;
     margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
 
+#video-container, #more-container {
+    background-color: transparent;
+    
 }
 
 .col-3 {
@@ -37,11 +49,6 @@ video {
 
 .col-3 img {
     max-width: 100%;
-}
-
-
-#video-container, #more-container {
-    background-color: transparent;
 }
 
 

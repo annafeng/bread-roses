@@ -6,47 +6,45 @@
 	<title>Bread and Roses</title>
 	<link rel="stylesheet" type="text/css" href="style/reset.css">
 	<link rel="stylesheet" type="text/css" href="style/style.css">
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
 
 	<div id="wrapper">
 
-		<div class="player">
+			<div class="title-card">
 
-			<video id="video-container" class="video" controls="true" autoplay>
-				<source src="videos/single-shot/Alberto Reseu0301ndiz La via va Mexico City 2014.mp4" autoplay controls>
-			</video>
+				Labour in a Single Shot
 
-				<div id="more-container" style="display: none;">
-					<div class="col-3">
-						<div><img src="images/SINGLESHOT_02.png"></div>
-						<div><img src="images/SINGLESHOT_03.png"></div>
-						<div><img src="images/SINGLESHOT_04.png"></div>
-						<div><img src="images/SINGLESHOT_03.png"></div>
-						<div><img src="images/SINGLESHOT_01.png"></div>
-						<div><img src="images/SINGLESHOT_02.png"></div>
+			</div>
+			
+
+		<div id="player">
+
+				<video id="video-container" class="video" controls="true" autoplay>
+					<source src="videos/single-shot/Alberto Reseu0301ndiz La via va Mexico City 2014.mp4" autoplay controls>
+				</video>
+
+					<div id="more-container" style="display: none;">
+						<div class="col-3">
+							<div><img src="images/SINGLESHOT_02.png"></div>
+							<div><img src="images/SINGLESHOT_03.png"></div>
+							<div><img src="images/SINGLESHOT_04.png"></div>
+							<div><img src="images/SINGLESHOT_03.png"></div>
+							<div><img src="images/SINGLESHOT_01.png"></div>
+							<div><img src="images/SINGLESHOT_02.png"></div>
+						</div>
 					</div>
-				</div>
 
 		</div> <!-- end player -->
 
+
 	</div> <!-- end wrapper -->
 
-	<script type="text/javascript">
-		var vid = document.getElementById('video-container');
 
-		vid.addEventListener("ended", hideVideo, false);
 
-		function hideVideo() {
-			var vid = document.getElementById('video-container');
-			var more = document.getElementById('more-container');
-			vid.removeEventListener("ended", hideVideo, false);
-			vid.style.display = 'none';
-			more.style.display = 'block';
-		}
-	</script>
+	
 
 </body>
 </html>
