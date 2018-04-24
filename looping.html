@@ -13,17 +13,37 @@
 
   <div class="player">
 
+     <!--  <div class="title_card">
+        <div class="title">
+          Labour in a Single Shot<br>
+          Harun Farocki and Antje Ehmann
+        </div>
+      </div> -->
+
     <video id="LIASS" width="500px" controls autoplay>
         <source src="videos/LIASS_01.mp4" id="LIASS" type="video/mp4">
     </video>
 
     <div id="up_next"> Up next </div>
 
+    <div id="caption">
+      One Year Perfomance
+    </div>
+
 
   </div>
 
 
     <style>
+
+    #caption {
+      width: 100%;
+      position: relative;
+      top: 2vw;
+      right: 2vw;
+      background-color: red;
+      z-index: 99999; 
+    }
 
     #up_next {
       width: 20vw;
@@ -32,6 +52,7 @@
       right: 2vw;
       background-color: red;
       z-index: 99999;
+      cursor: pointer;
     }
 
     </style>
@@ -63,9 +84,17 @@
         // after 10 seconds show up next
         $("#up_next").hide(); 
         document.getElementById('LIASS').addEventListener("timeupdate", function() {
-          if(this.currentTime > 10) {
+          if (this.currentTime > 10) {
             $("#up_next").show()
-            }
+          }
+
+        });
+
+
+        $('#up_next').click(function() {
+          $('#LIASS').attr('src','videos/OYP.mp4').get(0).play();
+          // $('#related_videos').hide();
+          $('#LIASS').show();
         });
 
 

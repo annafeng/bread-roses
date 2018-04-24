@@ -24,10 +24,12 @@ video {
 }
 
 .title {
-    font-size: 1.5em;
-    line-height: 1.3;
+    font-size: 2em;
+    font-family: GillFaciaMTPro-Regular;
+    line-height: 1;
     color: white;
     text-align: center;
+    width: 100%;
     position: absolute;
     top: 49.5%;
     left: 50%;
@@ -67,6 +69,34 @@ video {
 
 .col_3 img {
     max-width: 100%;
+}
+
+.thumbnail {
+    cursor: pointer;
+}
+
+
+
+
+.GillFaciaMTPro-Italic { 
+    font-family: GillFaciaMTPro-Italic;
+    font-weight: normal;
+    font-style: normal;
+}
+.GillFaciaMTPro-ItaDisplay { 
+    font-family: GillFaciaMTPro-ItaDisplay;
+    font-weight: normal;
+    font-style: normal;
+}
+.GillFaciaMTPro-RegDisplay { 
+    font-family: GillFaciaMTPro-RegDisplay;
+    font-weight: normal;
+    font-style: normal;
+}
+.GillFaciaMTPro-Regular { 
+    font-family: GillFaciaMTPro-Regular;
+    font-weight: normal;
+    font-style: normal;
 }
 
 
