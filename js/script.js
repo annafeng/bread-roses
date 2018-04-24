@@ -31,11 +31,14 @@ $(window).on('load', function() {
 
 
 		$('#LIASS_02').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_02.mp4');
-			$('#LIASS').get(0).play();
+			$('#LIASS').attr('src','videos/LIASS_02.mp4').get(0).play();
 			$('#up_next').hide();
 			$('#LIASS').show();
 		});
+
+
+
+		
 
 });
 
