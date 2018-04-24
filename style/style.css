@@ -1,6 +1,7 @@
 body {
     background-color: black;
-    font-family: sans-serif;
+    font-family: UniversNextPro-Regular;
+    /*font-family: sans-serif;*/
     font-size: 2vw;
 }
 
@@ -26,7 +27,12 @@ video {
 .title {
     font-size: 2em;
     font-family: GillFaciaMTPro-Regular;
-    line-height: 1;
+    line-height: 1.15;
+
+    /*font-size: 1.5em;*/
+    /*font-family: UniversNextPro-Regular;*/
+    /*line-height: 1.3;*/
+
     color: white;
     text-align: center;
     width: 100%;
@@ -36,8 +42,52 @@ video {
     transform: translate(-50%, -50%);
 }
 
+.panic_button {
+    position: fixed;
+    top: 1.5vw;
+    right: 1.5vw;
+    background-color: white;
+    width: 1vw;
+    height: 1vw;
+    /*border-radius: 100%;*/
+}
+
+.nav {
+    color: white;
+    font-size: .5em;
+    letter-spacing: .05em;
+    justify-content: center;
+    width: 100%;
+    height: 5%;
+    left: 0;
+    padding-top: 1.5%;
+    padding-left: 7.5%;
+}
+
+.top {
+    top: 0;
+    position: fixed;
+}
+
+.bottom {
+    bottom: 0;
+    position: fixed;
+    padding-top: .5%;
+    background-color: black;
+}
+
+.piece_no {
+    bottom: 0;
+    position: absolute;
+    padding-top: .5%;
+    padding-right: 7.5%;
+    text-align: right;
+    position: fixed;
+    /*background-color: blue;*/
+}
+
 .player {
-    width: 90vw;
+    width: 85%;
     margin: 0 auto;
     position: absolute;
     top: 50%;
@@ -53,17 +103,22 @@ video {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
-    /*background-color: pink;*/
-    
 }
+
+.thumbnail {
+    cursor: pointer;
+}
+
 
 .col_3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-left: 1.5%;
+    padding-right: 1.5%;
 }
 
 .col_3 > div {
-  padding: 1vw;
+  padding: 3%;
   color: white;
 }
 
@@ -71,8 +126,24 @@ video {
     max-width: 100%;
 }
 
-.thumbnail {
-    cursor: pointer;
+.article {
+    color: white;
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+p + p {
+    text-indent: 2em;
+}
+
+.caption {
+    font-size: .95em;
+    padding-top: 3%;
+    padding-bottom: 6%;
+    width: 80%;
+    position: absolute;
+    color: white;
 }
 
 
@@ -100,25 +171,34 @@ video {
 }
 
 
-/*.more-container {
-    background-color: black;
-    color: white;
-    width: 100%;
-    max-height: 100%
-    font-size: 1em;
-    text-align: center;
-    background-color: blue;
-}
 
-.more-3 {
-    width: 30%;
-    margin-right: 3.333%;
-    float: left;
-    background-color: pink;
-    overflow: hidden;
+.UniversNextPro-MediumItalic { 
+    font-family: UniversNextPro-MediumItalic;
+    font-weight: normal;
+    font-style: normal;
 }
-
-.more-3 img {
-    width: 100%;
-    margin: 0 auto;
-}*/
+.UniversNextPro-Medium { 
+    font-family: UniversNextPro-Medium;
+    font-weight: normal;
+    font-style: normal;
+}
+.UniversNextPro-Italic { 
+    font-family: UniversNextPro-Italic;
+    font-weight: normal;
+    font-style: normal;
+}
+.UniversNextPro-Regular { 
+    font-family: UniversNextPro-Regular;
+    font-weight: normal;
+    font-style: normal;
+}
+.UniversNextPro-BoldItalic { 
+    font-family: UniversNextPro-BoldItalic;
+    font-weight: normal;
+    font-style: normal;
+}
+.UniversNextPro-Bold { 
+    font-family: UniversNextPro-Bold;
+    font-weight: normal;
+    font-style: normal;
+}
