@@ -13,34 +13,63 @@
 
   <div class="player">
 
-    <video id="video-container" width="500px" controls autoplay>
-        <source src="videos/video1.mp4" id="video-source" type="video/mp4">
+    <video id="LIASS" width="500px" controls autoplay>
+        <source src="videos/LIASS_01.mp4" id="LIASS" type="video/mp4">
     </video>
+
+    <div id="up_next"> Up next </div>
+
 
   </div>
 
-  <script>
-      var count = 1;
-      var vidContainer = document.getElementById('video-container');
-      var vidSrc = document.getElementById('video-source');
-      vidContainer.addEventListener('ended', myHandler, false);
 
-      function myHandler(e)
+    <style>
 
-      {
-          if(!e)
-          {
-             e = window.event; 
-          }
-          // event is completed
+    #up_next {
+      width: 20vw;
+      position: absolute;
+      top: 1.5vw;
+      right: 2vw;
+      background-color: red;
+      z-index: 99999;
+    }
 
-            count++;
-            $(vidSrc).attr('src', "videos/video"+count+".mp4");
-            vidContainer.load();
-            vidContainer.play();
+    </style>
 
-      }
-    </script>
+    <script>
+
+        var count = 1;
+        var vidContainer = document.getElementById('LIASS');
+        var vidSrc = document.getElementById('LIASS');
+        vidContainer.addEventListener('ended', keepPlaying, false);
+
+        function keepPlaying(e)
+
+        {
+            if(!e)
+            {
+               e = window.event; 
+            }
+            // event is completed
+
+              count++;
+              $(vidSrc).attr('src', "videos/LIASS_0"+count+".mp4");
+              vidContainer.load();
+              vidContainer.play();
+
+        }
+
+
+        // after 10 seconds show up next
+        $("#up_next").hide(); 
+        document.getElementById('LIASS').addEventListener("timeupdate", function() {
+          if(this.currentTime > 10) {
+            $("#up_next").show()
+            }
+        });
+
+
+      </script>
 
 </body>
 </html>

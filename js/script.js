@@ -16,19 +16,22 @@ $(window).on('load', function() {
 	}, 2000);
 
 
-		// MORE VIDEOS
+		// related videos
+
 		var vid = document.getElementById('LIASS');
 
-		vid.addEventListener("ended", hideVideo, false);
+		vid.addEventListener("ended", showRelated, false);
 
-		function hideVideo() {
+		function showRelated() {
 			var vid = document.getElementById('LIASS');
 			var more = document.getElementById('related_videos');
-			vid.removeEventListener("ended", hideVideo, false);
-			vid.style.display = 'hidden';
+			vid.removeEventListener("ended", showRelated, false);
+			// vid.style.display = 'hidden';
 			more.style.display = 'block';
 		}
 
+
+		// clicking on a thumbnail > changes src > hides thumbnails > shows video
 
 		$('#LIASS_02').click(function() {
 			$('#LIASS').attr('src','videos/LIASS_02.mp4').get(0).play();
@@ -67,12 +70,20 @@ $(window).on('load', function() {
 		});
 
 
+		// display related videos again
+
 		document.getElementById('LIASS').addEventListener('ended',function(){
 			console.log(' video ended ');
 			$('#related_videos').show();
 		}, false);
 
+
 });
+
+
+
+
+
 
 
 
