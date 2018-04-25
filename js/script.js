@@ -115,23 +115,23 @@ $(window).on('load', function() {
 
 			
 
-				var div = document.createElement('div');
+				var more = document.getElementById('related_videos');
 
 				if ( more.className == "col_2") {
 					
 					
-					div.innerHTML = document.getElementById('two_up').innerHTML;
-					document.getElementById('blank').appendChild(div);
+					more.innerHTML = document.getElementById('two_up').innerHTML;
+					document.getElementById('blank').appendChild(more);
 
 				} else if ( more.className == "col_3") {
 					
-					div.innerHTML = document.getElementById('three_up').innerHTML;
-					document.getElementById('blank').appendChild(div);
+					more.innerHTML = document.getElementById('three_up').innerHTML;
+					document.getElementById('blank').appendChild(more);
 
 				} else if (more.ClassName == "col_6") {
 					
-					div.innerHTML = document.getElementById('six_up').innerHTML;
-					document.getElementById('blank').appendChild(div);
+					more.innerHTML = document.getElementById('six_up').innerHTML;
+					document.getElementById('blank').appendChild(more);
 
 				} else {
 					more.innerHTML == "you suck";
