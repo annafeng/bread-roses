@@ -94,35 +94,17 @@ $(window).on('load', function() {
 		var thumbLIASS = relatedThumbnails[Math.floor(Math.random() * relatedThumbnails.length)];
 
 		var templateLIASS = randomTemplate[Math.floor(Math.random() * randomTemplate.length)];
-<<<<<<< HEAD
-
-		console.log( templateLIASS )
 
 
-
-		// var vid = document.getElementById('LIASS');
-
-		// vid.addEventListener("ended", showRelated, false);
-
-		// function showRelated() {
-		// 	var vid = document.getElementById('LIASS');
-		// 	var more = document.getElementById('related_container');
-		// 	vid.removeEventListener("ended", showRelated, false);
-		// 	// vid.style.display = 'hidden';
-		// 	more.style.display = 'block';
-		// }
-
-
-	    // // Select related videos container
-	    // var selectedTemplate = $('#related_container');
-
-	    //     $('.related_videos').addClass('col_' + templateLIASS);
-
-
+	    // Select related videos container
+	    // var selectedTemplate = $('#related_videos');
 	    
-	   
-=======
->>>>>>> parent of 7dc7ce1... Removed #related_videos div
+	    // // Loop through all a-tags and apply color randomly
+	    // $.each( links, function(key, value) {
+	    //     // get random value/class-name from array and add it using the addClass function
+	    //     console.log ("IN");
+	    //     $(value).addClass( classes[ Math.floor ( Math.random() * length ) ] );
+	    // });
 
 
 
@@ -140,12 +122,11 @@ $(window).on('load', function() {
 
 
 	 // 	// OLD RELATED VIDEOS CODE
-
+	 	
 		// var vid = document.getElementById('LIASS');
 
 		// vid.addEventListener("ended", showRelated, false);
 
-<<<<<<< HEAD
 		// function showRelated() {
 		// 	var vid = document.getElementById('LIASS');
 		// 	var more = document.getElementsByClassName('col_3');
@@ -153,20 +134,10 @@ $(window).on('load', function() {
 		// 	// vid.style.display = 'hidden';
 		// 	more.style.display = 'block';
 		// }
-=======
-		function showRelated() {
-			var vid = document.getElementById('LIASS');
-			var more = document.getElementById('related_videos');
-			vid.removeEventListener("ended", showRelated, false);
-			// vid.style.display = 'hidden';
-			more.style.display = 'block';
-		}
->>>>>>> parent of 7dc7ce1... Removed #related_videos div
 
 
 		// // clicking on a thumbnail > changes src > hides thumbnails > shows video
 
-<<<<<<< HEAD
 		// $('#LIASS_02').click(function() {
 		// 	$('#LIASS').attr('src','videos/LIASS_02.mp4').get(0).play();
 		// 	$('.col_3').hide();
@@ -202,68 +173,18 @@ $(window).on('load', function() {
 		// 	$('.col_3').hide();
 		// 	$('#LIASS').show();
 		// });
-=======
-		$('#LIASS_02').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_02.mp4').get(0).play();
-			$('#related_videos').hide();
-			$('#LIASS').show();
-		});
-
-		$('#LIASS_03').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_03.mp4').get(0).play();
-			$('#related_videos').hide();
-			$('#LIASS').show();
-		});
-
-		$('#LIASS_04').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_04.mp4').get(0).play();
-			$('#related_videos').hide();
-			$('#LIASS').show();
-		});
-
-		$('#LIASS_05').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_05.mp4').get(0).play();
-			$('#related_videos').hide();
-			$('#LIASS').show();
-		});
-
-		$('#LIASS_06').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_06.mp4').get(0).play();
-			$('#related_videos').hide();
-			$('#LIASS').show();
-		});
-
-		$('#LIASS_07').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_07.mp4').get(0).play();
-			$('#related_videos').hide();
-			$('#LIASS').show();
-		});
->>>>>>> parent of 7dc7ce1... Removed #related_videos div
 
 
 		// // display related videos again
 
-<<<<<<< HEAD
 		// document.getElementById('LIASS').addEventListener('ended',function(){
 		// 	console.log(' video ended ');
 		// 	$('.col_3').show();
 		// }, false);
-=======
-		document.getElementById('LIASS').addEventListener('ended',function(){
-			console.log(' video ended ');
-			$('#related_videos').show();
-		}, false);
->>>>>>> parent of 7dc7ce1... Removed #related_videos div
 
 
 
 });
-
-
-
-
-
-
 
 
 
