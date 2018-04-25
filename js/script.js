@@ -89,11 +89,10 @@ $(window).on('load', function() {
 			"col_6",
 		];
 
-		// var videoLIASS = relatedVideos[Math.floor(Math.random() * relatedVideos.length)];
+		var videoLIASS = relatedVideos[Math.floor(Math.random() * relatedVideos.length)];
 
-		// var thumbLIASS = relatedThumbnails[Math.floor(Math.random() * relatedThumbnails.length)];
+		var thumbLIASS = relatedThumbnails[Math.floor(Math.random() * relatedThumbnails.length)];
 
-<<<<<<< HEAD
 		var templateLIASS = randomTemplate[Math.floor(Math.random() * randomTemplate.length)];
 <<<<<<< HEAD
 
@@ -124,20 +123,6 @@ $(window).on('load', function() {
 	   
 =======
 >>>>>>> parent of 7dc7ce1... Removed #related_videos div
-=======
-		// var templateLIASS = randomTemplate[Math.floor(Math.random() * randomTemplate.length)];
-
-
-	 //    // Select related videos container
-	 //    var selectedTemplate = $('#related_videos');
-	    
-	 //    // Loop through all a-tags and apply color randomly
-	 //    $.each( links, function(key, value) {
-	 //        // get random value/class-name from array and add it using the addClass function
-	 //        console.log ("IN");
-	 //        $(value).addClass( classes[ Math.floor ( Math.random() * length ) ] );
-	 //    });
->>>>>>> parent of 4ed1028... Saving before trying to make random template function
 
 
 
@@ -156,11 +141,7 @@ $(window).on('load', function() {
 
 	 // 	// OLD RELATED VIDEOS CODE
 
-<<<<<<< HEAD
 		// var vid = document.getElementById('LIASS');
-=======
-		var vid = document.getElementById('LIASS');
->>>>>>> parent of 4ed1028... Saving before trying to make random template function
 
 		// vid.addEventListener("ended", showRelated, false);
 
