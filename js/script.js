@@ -109,31 +109,19 @@ $(window).on('load', function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-	 // 	// OLD RELATED VIDEOS CODE
+	 	// OLD RELATED VIDEOS CODE
 	 	
-		// var vid = document.getElementById('LIASS');
+		var vid = document.getElementById('LIASS');
 
-		// vid.addEventListener("ended", showRelated, false);
+		vid.addEventListener("ended", showRelated, false);
 
-		// function showRelated() {
-		// 	var vid = document.getElementById('LIASS');
-		// 	var more = document.getElementsByClassName('col_3');
-		// 	vid.removeEventListener("ended", showRelated, false);
-		// 	// vid.style.display = 'hidden';
-		// 	more.style.display = 'block';
-		// }
+		function showRelated() {
+			var vid = document.getElementById('LIASS');
+			var more = document.getElementById('related_videos');
+			vid.removeEventListener("ended", showRelated, false);
+			// vid.style.display = 'hidden';
+			more.style.visibility = 'visible';
+		}
 
 
 		// // clicking on a thumbnail > changes src > hides thumbnails > shows video
