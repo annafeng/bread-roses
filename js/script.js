@@ -89,22 +89,22 @@ $(window).on('load', function() {
 			"col_6",
 		];
 
-		// var videoLIASS = relatedVideos[Math.floor(Math.random() * relatedVideos.length)];
+		var videoLIASS = relatedVideos[Math.floor(Math.random() * relatedVideos.length)];
 
-		// var thumbLIASS = relatedThumbnails[Math.floor(Math.random() * relatedThumbnails.length)];
+		var thumbLIASS = relatedThumbnails[Math.floor(Math.random() * relatedThumbnails.length)];
 
-		// var templateLIASS = randomTemplate[Math.floor(Math.random() * randomTemplate.length)];
+		var templateLIASS = randomTemplate[Math.floor(Math.random() * randomTemplate.length)];
 
 
-	 //    // Select related videos container
-	 //    var selectedTemplate = $('#related_videos');
+	    // Select related videos container
+	    var selectedTemplate = $('#related_videos');
 	    
-	 //    // Loop through all a-tags and apply color randomly
-	 //    $.each( links, function(key, value) {
-	 //        // get random value/class-name from array and add it using the addClass function
-	 //        console.log ("IN");
-	 //        $(value).addClass( classes[ Math.floor ( Math.random() * length ) ] );
-	 //    });
+	    // Loop through all a-tags and apply color randomly
+	    $.each( links, function(key, value) {
+	        // get random value/class-name from array and add it using the addClass function
+	        console.log ("IN");
+	        $(value).addClass( classes[ Math.floor ( Math.random() * length ) ] );
+	    });
 
 
 
@@ -121,7 +121,8 @@ $(window).on('load', function() {
 
 
 
-
+	 	// OLD RELATED VIDEOS CODE
+	 	
 		var vid = document.getElementById('LIASS');
 
 		vid.addEventListener("ended", showRelated, false);
