@@ -102,7 +102,7 @@ video {
 
 /* RELATED VIDEOS */
 
-.related_videos {
+#related_videos {
     width: 100%;
     position: absolute;
     top: 48%;

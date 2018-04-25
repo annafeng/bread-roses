@@ -95,16 +95,31 @@ $(window).on('load', function() {
 
 		var templateLIASS = randomTemplate[Math.floor(Math.random() * randomTemplate.length)];
 
+		console.log( templateLIASS )
 
-	    // Select related videos container
-	    var selectedTemplate = $('#related_videos');
+
+
+		// var vid = document.getElementById('LIASS');
+
+		// vid.addEventListener("ended", showRelated, false);
+
+		// function showRelated() {
+		// 	var vid = document.getElementById('LIASS');
+		// 	var more = document.getElementById('related_container');
+		// 	vid.removeEventListener("ended", showRelated, false);
+		// 	// vid.style.display = 'hidden';
+		// 	more.style.display = 'block';
+		// }
+
+
+	    // // Select related videos container
+	    // var selectedTemplate = $('#related_container');
+
+	    //     $('.related_videos').addClass('col_' + templateLIASS);
+
+
 	    
-	    // Loop through all a-tags and apply color randomly
-	    $.each( links, function(key, value) {
-	        // get random value/class-name from array and add it using the addClass function
-	        console.log ("IN");
-	        $(value).addClass( classes[ Math.floor ( Math.random() * length ) ] );
-	    });
+	   
 
 
 
@@ -121,66 +136,66 @@ $(window).on('load', function() {
 
 
 
-	 	// OLD RELATED VIDEOS CODE
-	 	
-		var vid = document.getElementById('LIASS');
+	 // 	// OLD RELATED VIDEOS CODE
 
-		vid.addEventListener("ended", showRelated, false);
+		// var vid = document.getElementById('LIASS');
 
-		function showRelated() {
-			var vid = document.getElementById('LIASS');
-			var more = document.getElementsByClassName('col_3');
-			vid.removeEventListener("ended", showRelated, false);
-			// vid.style.display = 'hidden';
-			more.style.display = 'block';
-		}
+		// vid.addEventListener("ended", showRelated, false);
 
-
-		// clicking on a thumbnail > changes src > hides thumbnails > shows video
-
-		$('#LIASS_02').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_02.mp4').get(0).play();
-			$('.col_3').hide();
-			$('#LIASS').show();
-		});
-
-		$('#LIASS_03').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_03.mp4').get(0).play();
-			$('.col_3').hide();
-			$('#LIASS').show();
-		});
-
-		$('#LIASS_04').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_04.mp4').get(0).play();
-			$('.col_3').hide();
-			$('#LIASS').show();
-		});
-
-		$('#LIASS_05').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_05.mp4').get(0).play();
-			$('.col_3').hide();
-			$('#LIASS').show();
-		});
-
-		$('#LIASS_06').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_06.mp4').get(0).play();
-			$('.col_3').hide();
-			$('#LIASS').show();
-		});
-
-		$('#LIASS_07').click(function() {
-			$('#LIASS').attr('src','videos/LIASS_07.mp4').get(0).play();
-			$('.col_3').hide();
-			$('#LIASS').show();
-		});
+		// function showRelated() {
+		// 	var vid = document.getElementById('LIASS');
+		// 	var more = document.getElementsByClassName('col_3');
+		// 	vid.removeEventListener("ended", showRelated, false);
+		// 	// vid.style.display = 'hidden';
+		// 	more.style.display = 'block';
+		// }
 
 
-		// display related videos again
+		// // clicking on a thumbnail > changes src > hides thumbnails > shows video
 
-		document.getElementById('LIASS').addEventListener('ended',function(){
-			console.log(' video ended ');
-			$('.col_3').show();
-		}, false);
+		// $('#LIASS_02').click(function() {
+		// 	$('#LIASS').attr('src','videos/LIASS_02.mp4').get(0).play();
+		// 	$('.col_3').hide();
+		// 	$('#LIASS').show();
+		// });
+
+		// $('#LIASS_03').click(function() {
+		// 	$('#LIASS').attr('src','videos/LIASS_03.mp4').get(0).play();
+		// 	$('.col_3').hide();
+		// 	$('#LIASS').show();
+		// });
+
+		// $('#LIASS_04').click(function() {
+		// 	$('#LIASS').attr('src','videos/LIASS_04.mp4').get(0).play();
+		// 	$('.col_3').hide();
+		// 	$('#LIASS').show();
+		// });
+
+		// $('#LIASS_05').click(function() {
+		// 	$('#LIASS').attr('src','videos/LIASS_05.mp4').get(0).play();
+		// 	$('.col_3').hide();
+		// 	$('#LIASS').show();
+		// });
+
+		// $('#LIASS_06').click(function() {
+		// 	$('#LIASS').attr('src','videos/LIASS_06.mp4').get(0).play();
+		// 	$('.col_3').hide();
+		// 	$('#LIASS').show();
+		// });
+
+		// $('#LIASS_07').click(function() {
+		// 	$('#LIASS').attr('src','videos/LIASS_07.mp4').get(0).play();
+		// 	$('.col_3').hide();
+		// 	$('#LIASS').show();
+		// });
+
+
+		// // display related videos again
+
+		// document.getElementById('LIASS').addEventListener('ended',function(){
+		// 	console.log(' video ended ');
+		// 	$('.col_3').show();
+		// }, false);
 
 
 
