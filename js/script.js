@@ -113,11 +113,35 @@ $(window).on('load', function() {
 
 
 
-		// Counter
+		// UP NEXT (going to next page)
 		// After 5 videos, display up next
 
+		// Make a counter
+		// 0 when page loads, watched videos = 0
+		// Every time someone clicks a video, increment the counter
+		// If counter hits 5, show up next
+		
+
+		function timesWatched() {
+
+			var watchCount = 0;
+			var vid = document.getElementById('LIASS');
+
+			vid.addEventListener("ended", function() {
+
+				watchCount++;
+
+			    if (watchCount > 5 ) {	
+			    	window.location.href = "looping.html";
+			    }
+			}, true);
+
+		}
+
+		timesWatched();
 
 
+		
 
 
 
@@ -171,7 +195,7 @@ $(window).on('load', function() {
 
 
 
-});
+}); // end page load
 
 
 
