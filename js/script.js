@@ -113,40 +113,27 @@ $(window).on('load', function() {
 			console.log( templateLIASS )
 			console.log ( more.className )
 
-			
+			if ( more.className == "col_2") {
+								
+				more.innerHTML = document.getElementById('two_up').innerHTML;
+				document.getElementById('blank').appendChild(more);
 
-				var more = document.getElementById('related_videos');
-
-				if ( more.className == "col_2") {
-					
-					
-					more.innerHTML = document.getElementById('two_up').innerHTML;
-					document.getElementById('blank').appendChild(more);
-
-				} else if ( more.className == "col_3") {
-					
-					more.innerHTML = document.getElementById('three_up').innerHTML;
-					document.getElementById('blank').appendChild(more);
-
-				} else if (more.ClassName == "col_6") {
-					
-					more.innerHTML = document.getElementById('six_up').innerHTML;
-					document.getElementById('blank').appendChild(more);
-
-				} else {
-					more.innerHTML == "you suck";
-				}
+			} else if ( more.className == "col_3") {
 				
+				more.innerHTML = document.getElementById('three_up').innerHTML;
+				document.getElementById('blank').appendChild(more);
 
+			} else if (more.ClassName == "col_6") {
+				
+				more.innerHTML = document.getElementById('six_up').innerHTML;
+				document.getElementById('blank').appendChild(more);
 
+			} else {
 
-			
+				more.innerHTML = "you suck";
+			}
 
 		}
-
-
-
-
 
 
 		// UP NEXT (going to next page)
@@ -179,6 +166,8 @@ $(window).on('load', function() {
 
 
 		
+
+
 
 
 
