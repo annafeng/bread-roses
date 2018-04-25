@@ -14,7 +14,7 @@ $(window).on('load', function() {
 		// 5. On videoEnded, randomly choose between the 3 templates
 		// 6. From the array, pull out videos and thumbnails and inject them into the corresponding box in the template
 
-		// Video array
+		// VIDEOS
 		var relatedVideos = [
 			"videos/LIASS_01.mp4",
 			"videos/LIASS_02.mp4",
@@ -48,7 +48,7 @@ $(window).on('load', function() {
 			"videos/LIASS_30.mp4",
 		];
 
-		// Thumbnail array
+		// THUMBNAILS
 		var relatedThumbnails = [
 			"videos/LIASS_PIC_01.jpg",
 			"videos/LIASS_PIC_02.jpg",
@@ -82,35 +82,21 @@ $(window).on('load', function() {
 			"videos/LIASS_PIC_30.jpg",
 		];
 
-		// Template array
+		// TEMPLATES
 		var randomTemplate = [
 			"col_2",
 			"col_3",
 			"col_6",
 		];
 
+
+		// RANDOM NUMBERS
 		var videoLIASS = relatedVideos[Math.floor(Math.random() * relatedVideos.length)];
-
 		var thumbLIASS = relatedThumbnails[Math.floor(Math.random() * relatedThumbnails.length)];
-
 		var templateLIASS = randomTemplate[Math.floor(Math.random() * randomTemplate.length)];
 
-
-	    // Select related videos container
-	    // var selectedTemplate = $('#related_videos');
-	    
-	    // // Loop through all a-tags and apply color randomly
-	    // $.each( links, function(key, value) {
-	    //     // get random value/class-name from array and add it using the addClass function
-	    //     console.log ("IN");
-	    //     $(value).addClass( classes[ Math.floor ( Math.random() * length ) ] );
-	    // });
-
-
-
-
-	 	// OLD RELATED VIDEOS CODE
 	 	
+	 	// Randomly choose a template
 		var vid = document.getElementById('LIASS');
 
 		vid.addEventListener("ended", showRelated, false);
@@ -121,7 +107,20 @@ $(window).on('load', function() {
 			vid.removeEventListener("ended", showRelated, false);
 			// vid.style.display = 'hidden';
 			more.style.visibility = 'visible';
+			more.className = templateLIASS;
+			console.log (templateLIASS)
 		}
+
+
+
+		// Counter
+		// After 5 videos, display up next
+
+
+
+
+
+
 
 
 		// // clicking on a thumbnail > changes src > hides thumbnails > shows video
