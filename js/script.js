@@ -1,19 +1,24 @@
 $(window).on('load', function() {
 
 
-	// TITLE CARD
+	// 1. TITLE CARD
 	setTimeout(function() {
-
-		// after 2s, show video
-		// in the meantime, show card
-		setTimeout(function() {
-			$('.title_card').fadeOut()
-		}, 0)
+		$('.title_card').fadeOut()
+	}, 2000)
 
 
-			$('.player').show();
+	// setTimeout(function() {
 
-	}, 2000);
+	// 	// after 2s, show video
+	// 	// in the meantime, show card
+	// 	setTimeout(function() {
+	// 		$('.title_card').fadeOut()
+	// 	}, 2000)
+
+
+	// 	// $('.player').show();
+
+	// }, 0);
 
 
 		// related videos
@@ -76,6 +81,7 @@ $(window).on('load', function() {
 			console.log(' video ended ');
 			$('#related_videos').show();
 		}, false);
+
 
 
 });
