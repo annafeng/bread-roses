@@ -89,11 +89,22 @@ $(window).on('load', function() {
 			"col_6",
 		];
 
-		var videoLIASS = relatedVideos[Math.floor(Math.random() * relatedVideos.length)];
+		// var videoLIASS = relatedVideos[Math.floor(Math.random() * relatedVideos.length)];
 
-		var thumbLIASS = relatedThumbnails[Math.floor(Math.random() * relatedThumbnails.length)];
+		// var thumbLIASS = relatedThumbnails[Math.floor(Math.random() * relatedThumbnails.length)];
 
-		var templateLIASS = randomTemplate[Math.floor(Math.random() * randomTemplate.length)];
+		// var templateLIASS = randomTemplate[Math.floor(Math.random() * randomTemplate.length)];
+
+
+	 //    // Select related videos container
+	 //    var selectedTemplate = $('#related_videos');
+	    
+	 //    // Loop through all a-tags and apply color randomly
+	 //    $.each( links, function(key, value) {
+	 //        // get random value/class-name from array and add it using the addClass function
+	 //        console.log ("IN");
+	 //        $(value).addClass( classes[ Math.floor ( Math.random() * length ) ] );
+	 //    });
 
 
 
@@ -117,7 +128,7 @@ $(window).on('load', function() {
 
 		function showRelated() {
 			var vid = document.getElementById('LIASS');
-			var more = document.getElementById('related_videos');
+			var more = document.getElementsByClassName('col_3');
 			vid.removeEventListener("ended", showRelated, false);
 			// vid.style.display = 'hidden';
 			more.style.display = 'block';
@@ -128,37 +139,37 @@ $(window).on('load', function() {
 
 		$('#LIASS_02').click(function() {
 			$('#LIASS').attr('src','videos/LIASS_02.mp4').get(0).play();
-			$('#related_videos').hide();
+			$('.col_3').hide();
 			$('#LIASS').show();
 		});
 
 		$('#LIASS_03').click(function() {
 			$('#LIASS').attr('src','videos/LIASS_03.mp4').get(0).play();
-			$('#related_videos').hide();
+			$('.col_3').hide();
 			$('#LIASS').show();
 		});
 
 		$('#LIASS_04').click(function() {
 			$('#LIASS').attr('src','videos/LIASS_04.mp4').get(0).play();
-			$('#related_videos').hide();
+			$('.col_3').hide();
 			$('#LIASS').show();
 		});
 
 		$('#LIASS_05').click(function() {
 			$('#LIASS').attr('src','videos/LIASS_05.mp4').get(0).play();
-			$('#related_videos').hide();
+			$('.col_3').hide();
 			$('#LIASS').show();
 		});
 
 		$('#LIASS_06').click(function() {
 			$('#LIASS').attr('src','videos/LIASS_06.mp4').get(0).play();
-			$('#related_videos').hide();
+			$('.col_3').hide();
 			$('#LIASS').show();
 		});
 
 		$('#LIASS_07').click(function() {
 			$('#LIASS').attr('src','videos/LIASS_07.mp4').get(0).play();
-			$('#related_videos').hide();
+			$('.col_3').hide();
 			$('#LIASS').show();
 		});
 
@@ -167,7 +178,7 @@ $(window).on('load', function() {
 
 		document.getElementById('LIASS').addEventListener('ended',function(){
 			console.log(' video ended ');
-			$('#related_videos').show();
+			$('.col_3').show();
 		}, false);
 
 
