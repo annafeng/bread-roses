@@ -102,14 +102,50 @@ $(window).on('load', function() {
 		vid.addEventListener("ended", showRelated, false);
 
 		function showRelated() {
+
 			var vid = document.getElementById('LIASS');
 			var more = document.getElementById('related_videos');
 			vid.removeEventListener("ended", showRelated, false);
 			// vid.style.display = 'hidden';
 			more.style.visibility = 'visible';
 			more.className = templateLIASS;
-			console.log (templateLIASS)
+
+			console.log( templateLIASS )
+			console.log ( more.className )
+
+			
+
+				var div = document.createElement('div');
+
+				if ( more.className == "col_2") {
+					
+					
+					div.innerHTML = document.getElementById('two_up').innerHTML;
+					document.getElementById('blank').appendChild(div);
+
+				} else if ( more.className == "col_3") {
+					
+					div.innerHTML = document.getElementById('three_up').innerHTML;
+					document.getElementById('blank').appendChild(div);
+
+				} else if (more.ClassName == "col_6") {
+					
+					div.innerHTML = document.getElementById('six_up').innerHTML;
+					document.getElementById('blank').appendChild(div);
+
+				} else {
+					more.innerHTML == "you suck";
+				}
+				
+
+
+
+			
+
 		}
+
+
+
 
 
 
@@ -132,9 +168,10 @@ $(window).on('load', function() {
 				watchCount++;
 
 			    if (watchCount > 5 ) {	
-			    	window.location.href = "looping.html";
+			    	window.location.href = "one-year-performance.html";
 			    }
 			}, true);
+			// what is the diff between true and false?
 
 		}
 
