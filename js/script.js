@@ -103,34 +103,41 @@ $(window).on('load', function() {
 
 		function showRelated() {
 
+			// choose a random type: 2, 3, 6
+			// set the class of related_videos to correct class
+			// clear contents of related_videos
+			// for the number of videos that you need
+			// append a div.thumbnail with an image inside
+			// add video src to the data-video attribute of the image
+
 			var vid = document.getElementById('LIASS');
-			var more = document.getElementById('related_videos');
+			var relVids = document.getElementById('related_videos');
 			// vid.removeEventListener("ended", showRelated, false);
 			// vid.style.display = 'hidden';
-			more.style.visibility = 'visible';
-			more.className = templateLIASS;
+			relVids.style.visibility = 'visible';
+			relVids.className = templateLIASS;
 
 			console.log( templateLIASS )
-			console.log ( more.className )
+			console.log ( relVids.className )
 
-			if ( more.className == "col_2") {
+			if ( relVids.className == "col_2") {
 								
-				more.innerHTML = document.getElementById('two_up').innerHTML;
-				document.getElementById('blank').appendChild(more);
+				relVids.innerHTML = document.getElementById('two_up').innerHTML;
+				document.getElementById('blank').appendChild(relVids);
 
-			} else if ( more.className == "col_3") {
+			} else if ( relVids.className == "col_3") {
 				
-				more.innerHTML = document.getElementById('three_up').innerHTML;
-				document.getElementById('blank').appendChild(more);
+				relVids.innerHTML = document.getElementById('three_up').innerHTML;
+				document.getElementById('blank').appendChild(relVids);
 
-			} else if (more.ClassName == "col_6") {
+			} else if (relVids.ClassName == "col_6") {
 				
-				more.innerHTML = document.getElementById('six_up').innerHTML;
-				document.getElementById('blank').appendChild(more);
+				relVids.innerHTML = document.getElementById('six_up').innerHTML;
+				document.getElementById('blank').appendChild(relVids);
 
 			} else {
 
-				more.innerHTML = "error";
+				relVids.innerHTML = "error";
 			}
 
 		}
@@ -168,11 +175,11 @@ $(window).on('load', function() {
 		function hideRelated() {
 
 			var vid = document.getElementById('LIASS');
-			var more = document.getElementById('related_videos');
+			var relVids = document.getElementById('related_videos');
 
 			vid.addEventListener("playing", function() {
 
-				more.style.visibility = 'hidden';
+				relVids.style.visibility = 'hidden';
 				// watchCount++;
 
 			    // if (watchCount > 5 ) {	
@@ -187,6 +194,15 @@ $(window).on('load', function() {
 
 		
 		
+
+		// when an image inside of related_videos is clicked
+		// hide related_videos
+		// grab the src from image that was clicked from the data-video attribute
+		// set the src of the #LIASS to new source
+		// trigger play
+
+
+
 
 
 
