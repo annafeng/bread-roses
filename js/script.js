@@ -105,7 +105,7 @@ $(window).on('load', function() {
 
 			var vid = document.getElementById('LIASS');
 			var more = document.getElementById('related_videos');
-			vid.removeEventListener("ended", showRelated, false);
+			// vid.removeEventListener("ended", showRelated, false);
 			// vid.style.display = 'hidden';
 			more.style.visibility = 'visible';
 			more.className = templateLIASS;
@@ -130,7 +130,7 @@ $(window).on('load', function() {
 
 			} else {
 
-				more.innerHTML = "you suck";
+				more.innerHTML = "error";
 			}
 
 		}
@@ -177,11 +177,13 @@ $(window).on('load', function() {
 
 			    // if (watchCount > 5 ) {	
 			    	// window.location.href = "one-year-performance.html";
-			    }
-			}, true);
+			    
+			});
 			// what is the diff between true and false?
 
 		}
+
+		hideRelated();
 
 		
 		
