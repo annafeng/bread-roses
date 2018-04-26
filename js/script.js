@@ -165,6 +165,25 @@ $(window).on('load', function() {
 		timesWatched();
 
 
+		function hideRelated() {
+
+			var vid = document.getElementById('LIASS');
+			var more = document.getElementById('related_videos');
+
+			vid.addEventListener("playing", function() {
+
+				more.style.visibility = 'hidden';
+				// watchCount++;
+
+			    // if (watchCount > 5 ) {	
+			    	// window.location.href = "one-year-performance.html";
+			    }
+			}, true);
+			// what is the diff between true and false?
+
+		}
+
+		
 		
 
 
