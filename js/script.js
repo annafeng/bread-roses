@@ -14,79 +14,112 @@ $(window).on('load', function() {
 		// 5. On videoEnded, randomly choose between the 3 templates
 		// 6. From the array, pull out videos and thumbnails and inject them into the corresponding box in the template
 
-		// VIDEOS
-		var relatedVideos = [
-			"videos/LIASS_01.mp4",
-			"videos/LIASS_02.mp4",
-			"videos/LIASS_03.mp4",
-			"videos/LIASS_04.mp4",
-			"videos/LIASS_05.mp4",
-			"videos/LIASS_06.mp4",
-			"videos/LIASS_07.mp4",
-			"videos/LIASS_08.mp4",
-			"videos/LIASS_09.mp4",
-			"videos/LIASS_10.mp4",
-			"videos/LIASS_11.mp4",
-			"videos/LIASS_12.mp4",
-			"videos/LIASS_13.mp4",
-			"videos/LIASS_14.mp4",
-			"videos/LIASS_15.mp4",
-			"videos/LIASS_16.mp4",
-			"videos/LIASS_17.mp4",
-			"videos/LIASS_18.mp4",
-			"videos/LIASS_19.mp4",
-			"videos/LIASS_20.mp4",
-			"videos/LIASS_21.mp4",
-			"videos/LIASS_22.mp4",
-			"videos/LIASS_23.mp4",
-			"videos/LIASS_24.mp4",
-			"videos/LIASS_25.mp4",
-			"videos/LIASS_26.mp4",
-			"videos/LIASS_27.mp4",
-			"videos/LIASS_28.mp4",
-			"videos/LIASS_29.mp4",
-			"videos/LIASS_30.mp4",
-		];
+		// // VIDEOS
+		// var relatedVideos = [
+		// 	"videos/LIASS_01.mp4",
+		// 	"videos/LIASS_02.mp4",
+		// 	"videos/LIASS_03.mp4",
+		// 	"videos/LIASS_04.mp4",
+		// 	"videos/LIASS_05.mp4",
+		// 	"videos/LIASS_06.mp4",
+		// 	// "videos/LIASS_07.mp4",
+		// 	// "videos/LIASS_08.mp4",
+		// 	// "videos/LIASS_09.mp4",
+		// 	// "videos/LIASS_10.mp4",
+		// 	// "videos/LIASS_11.mp4",
+		// 	// "videos/LIASS_12.mp4",
+		// 	// "videos/LIASS_13.mp4",
+		// 	// "videos/LIASS_14.mp4",
+		// 	// "videos/LIASS_15.mp4",
+		// 	// "videos/LIASS_16.mp4",
+		// 	// "videos/LIASS_17.mp4",
+		// 	// "videos/LIASS_18.mp4",
+		// 	// "videos/LIASS_19.mp4",
+		// 	// "videos/LIASS_20.mp4",
+		// 	// "videos/LIASS_21.mp4",
+		// 	// "videos/LIASS_22.mp4",
+		// 	// "videos/LIASS_23.mp4",
+		// 	// "videos/LIASS_24.mp4",
+		// 	// "videos/LIASS_25.mp4",
+		// 	// "videos/LIASS_26.mp4",
+		// 	// "videos/LIASS_27.mp4",
+		// 	// "videos/LIASS_28.mp4",
+		// 	// "videos/LIASS_29.mp4",
+		// 	// "videos/LIASS_30.mp4",
+		// ];
 
-		// THUMBNAILS
-		var relatedThumbnails = [
-			"videos/LIASS_PIC_01.jpg",
-			"videos/LIASS_PIC_02.jpg",
-			"videos/LIASS_PIC_03.jpg",
-			"videos/LIASS_PIC_04.jpg",
-			"videos/LIASS_PIC_05.jpg",
-			"videos/LIASS_PIC_06.jpg",
-			"videos/LIASS_PIC_07.jpg",
-			"videos/LIASS_PIC_08.jpg",
-			"videos/LIASS_PIC_09.jpg",
-			"videos/LIASS_PIC_10.jpg",
-			"videos/LIASS_PIC_11.jpg",
-			"videos/LIASS_PIC_12.jpg",
-			"videos/LIASS_PIC_13.jpg",
-			"videos/LIASS_PIC_14.jpg",
-			"videos/LIASS_PIC_15.jpg",
-			"videos/LIASS_PIC_16.jpg",
-			"videos/LIASS_PIC_17.jpg",
-			"videos/LIASS_PIC_18.jpg",
-			"videos/LIASS_PIC_19.jpg",
-			"videos/LIASS_PIC_20.jpg",
-			"videos/LIASS_PIC_21.jpg",
-			"videos/LIASS_PIC_22.jpg",
-			"videos/LIASS_PIC_23.jpg",
-			"videos/LIASS_PIC_24.jpg",
-			"videos/LIASS_PIC_25.jpg",
-			"videos/LIASS_PIC_26.jpg",
-			"videos/LIASS_PIC_27.jpg",
-			"videos/LIASS_PIC_28.jpg",
-			"videos/LIASS_PIC_29.jpg",
-			"videos/LIASS_PIC_30.jpg",
+		// // THUMBNAILS
+		// var relatedThumbnails = [
+		// 	"images/LIASS_PIC_01.png",
+		// 	"images/LIASS_PIC_02.png",
+		// 	"images/LIASS_PIC_03.png",
+		// 	"images/LIASS_PIC_04.png",
+		// 	"images/LIASS_PIC_05.png",
+		// 	"images/LIASS_PIC_06.png",
+		// 	"images/LIASS_PIC_07.png",
+		// 	"images/LIASS_PIC_08.png",
+		// 	"images/LIASS_PIC_09.png",
+		// 	"images/LIASS_PIC_10.png",
+		// 	"images/LIASS_PIC_11.png",
+		// 	"images/LIASS_PIC_12.png",
+		// 	"images/LIASS_PIC_13.png",
+		// 	"images/LIASS_PIC_14.png",
+		// 	"images/LIASS_PIC_15.png",
+		// 	"images/LIASS_PIC_16.png",
+		// 	"images/LIASS_PIC_17.png",
+		// 	"images/LIASS_PIC_18.png",
+		// 	"images/LIASS_PIC_19.png",
+		// 	"images/LIASS_PIC_20.png",
+		// 	"images/LIASS_PIC_21.png",
+		// 	"images/LIASS_PIC_22.png",
+		// 	"images/LIASS_PIC_23.png",
+		// 	"images/LIASS_PIC_24.png",
+		// 	"images/LIASS_PIC_25.png",
+		// 	"images/LIASS_PIC_26.png",
+		// 	"images/LIASS_PIC_27.png",
+		// 	"images/LIASS_PIC_28.png",
+		// 	"images/LIASS_PIC_29.png",
+		// 	"images/LIASS_PIC_30.png",
+		// ];
+
+		var randomNumber = [
+			"01",
+			"02",
+			"03",
+			"04",
+			"05",
+			"06",
+			"07",
+			"08",
+			"09",
+			"10",
+			"11",
+			"12",
+			"13",
+			"14",
+			"15",
+			"16",
+			"17",
+			"18",
+			"19",
+			"20",
+			"21",
+			"22",
+			"23",
+			"24",
+			"25",
+			"26",
+			"27",
+			"28",
+			"29",
+			"30",			
 		];
 
 		// TEMPLATES
 		var randomTemplate = [
 			"col_2",
 			"col_3",
-			"col_6",
+			"col_6"
 		];
 
 
@@ -110,37 +143,52 @@ $(window).on('load', function() {
 			// append a div.thumbnail with an image inside
 			// add video src to the data-video attribute of the image
 
+			// i need to choose a random template,
+			// then make corresponding amount of divs
+			// then put random imgs in each div
+				// and assign corresponding video source to the img
+
 			var vid = document.getElementById('LIASS');
 			var relVids = document.getElementById('related_videos');
-			// vid.removeEventListener("ended", showRelated, false);
-			// vid.style.display = 'hidden';
-			relVids.style.visibility = 'visible';
-			relVids.className = templateLIASS;
+			relVids.style.visibility = 'visible'; // making it visibile
+			relVids.className = templateLIASS; // setting class
+			// relVids.innerHTML = ""; // clearing related_videos div
 
-			console.log( templateLIASS )
-			console.log ( relVids.className )
 
-			if ( relVids.className == "col_2") {
-								
-				relVids.innerHTML = document.getElementById('two_up').innerHTML;
-				document.getElementById('blank').appendChild(relVids);
+			console.log( templateLIASS );
+			console.log ( relVids.className );
 
-			} else if ( relVids.className == "col_3") {
+
+			if ( relVids.className == "col_2" ) {
+
+				relVids.innerHTML = '<div id="col_2"> <div id="LIASS_00" class="thumbnail"><img src="' + randomNumber + '"></div><div id="LIASS_00" class="thumbnail"><img src="' + randomNumber + '"></div> </div>';
+
+				console.log (relVids.innerHTML);
+				console.log (randomNumber);
+
+
+			} else if ( relVids.className == "col_3" ) {
 				
-				relVids.innerHTML = document.getElementById('three_up').innerHTML;
-				document.getElementById('blank').appendChild(relVids);
+				relVids.innerHTML = '<div id="col_3"> <div id="LIASS_00" class="thumbnail"><img src="' + randomNumber + '"></div><div id="LIASS_00" class="thumbnail"><img src="' + randomNumber + '"></div><div id="LIASS_00" class="thumbnail"><img src="' + randomNumber + '"></div> </div>';
 
-			} else if (relVids.ClassName == "col_6") {
+			} else if (relVids.ClassName == "col_6" ) {
 				
-				relVids.innerHTML = document.getElementById('six_up').innerHTML;
-				document.getElementById('blank').appendChild(relVids);
+				relVids.innerHTML = '<div id="col_3"> <div id="LIASS_00" class="thumbnail"><img src="' + randomNumber + '"></div><div id="LIASS_00" class="thumbnail"><img src="' + randomNumber + '"></div><div id="LIASS_00" class="thumbnail"><img src="' + randomNumber + '"></div><div id="LIASS_00" class="thumbnail"><img src="' + randomNumber + '"></div><div id="LIASS_00" class="thumbnail"><img src="' + randomNumber + '"></div><div id="LIASS_00" class="thumbnail"><img src="' + randomNumber + '"></div> </div>';
+
 
 			} else {
 
-				relVids.innerHTML = "error";
+				relVids.innerHTML ='boo';
+
+
 			}
 
 		}
+
+// <div id="LIASS_00" class="thumbnail"><img src="' + thumbLIASS + '"></div>
+
+				// relVids.innerHTML = document.getElementById('two_up').innerHTML;
+				// document.getElementById('blank').appendChild(relVids);
 
 
 		// UP NEXT (going to next page)
