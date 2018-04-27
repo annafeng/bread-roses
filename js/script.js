@@ -82,7 +82,7 @@ $(window).on('load', function() {
 			// "images/LIASS_PIC_30.png",
 		];
 
-		var randomNumber = [
+		var getRandomNumber = [
 			"01",
 			"02",
 			"03",
@@ -127,7 +127,7 @@ $(window).on('load', function() {
 		var videoLIASS = relatedVideos[Math.floor(Math.random() * relatedVideos.length)];
 		var thumbLIASS = relatedThumbnails[Math.floor(Math.random() * relatedThumbnails.length)];
 		var templateLIASS = randomTemplate[Math.floor(Math.random() * randomTemplate.length)];
-		var randomSrc = randomNumber[Math.floor(Math.random() * randomNumber.length)];
+		var randomSrc = getRandomNumber[Math.floor(Math.random() * getRandomNumber.length)];
 
 
 	 	
@@ -155,7 +155,15 @@ $(window).on('load', function() {
 			relVids.style.visibility = 'visible'; // making it visibile
 			relVids.className = templateLIASS; // setting class
 			relVids.innerHTML = ""; // clearing related_videos div
-			var randomSrc = randomNumber[Math.floor(Math.random() * randomNumber.length)];
+			// var randomSrc = getRandomNumber[Math.floor(Math.random() * getRandomNumber.length)];
+
+			// function shuffle(o) {
+			//     for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+			//     return o;
+			// }
+
+			// var randomSrc = shuffle(getRandomNumber);
+
 
 			console.log( templateLIASS );
 			console.log ( relVids.className );
