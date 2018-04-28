@@ -164,24 +164,24 @@ $(window).on('load', function() {
 		// If counter hits 5, show up next
 		
 
-		function timesWatched() {
+		// function timesWatched() {
 
-			var watchCount = 0;
-			var vid = document.getElementById('LIASS');
+		// 	var watchCount = 0;
+		// 	var vid = document.getElementById('LIASS');
 
-			vid.addEventListener("ended", function() {
+		// 	vid.addEventListener("ended", function() {
 
-				watchCount++;
+		// 		watchCount++;
 
-			    if (watchCount > 5 ) {	
-			    	window.location.href = "one-year-performance.html";
-			    }
-			}, true);
-			// what is the diffence between true and false?
+		// 	    if (watchCount > 5 ) {	
+		// 	    	window.location.href = "one-year-performance.html";
+		// 	    }
+		// 	}, true);
+		// 	// what is the diffence between true and false?
 
-		}
+		// }
 
-		timesWatched();
+		// timesWatched();
 
 
 
