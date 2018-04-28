@@ -56,16 +56,10 @@ $(window).on('load', function() {
 			"col_6"
 		];
 	 	
-
-		var templateLIASS = arrRandomTemplate[Math.floor(Math.random() * arrRandomTemplate.length)];
-
 		function shuffle(o) {
 		    for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
 		    return o;
 		}
-
-		var randomSrc = shuffle(arrRandomNumber);
-
 
 	 	// Randomly choose a template
 		var vid = document.getElementById('LIASS');
@@ -74,6 +68,8 @@ $(window).on('load', function() {
 		vid.addEventListener("ended", showRelated, false);
 
 		function showRelated() {
+
+			var templateLIASS = arrRandomTemplate[Math.floor(Math.random() * arrRandomTemplate.length)];
 
 			// choose a random type: 2, 3, 6
 			// set the class of related_videos to correct class
@@ -89,6 +85,8 @@ $(window).on('load', function() {
 
 			if ( relVids.className == "col_2" ) {
 
+				var randomSrc = shuffle(arrRandomNumber);
+
 				relVids.innerHTML = '<div id="col_2"> <div id="LIASS_' + randomSrc[0] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[0] + '.png" data-video="videos/LIASS_' + randomSrc[0] + '.mp4"></div><div id="LIASS_' + randomSrc[1] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[1] + '.png" data-video="videos/LIASS_' + randomSrc[1] + '.mp4"></div> </div>';
 
 				console.log ( 'this is relVids inner html ' + relVids.innerHTML);
@@ -97,12 +95,16 @@ $(window).on('load', function() {
 
 
 			} else if ( relVids.className == "col_3" ) {
+
+				var randomSrc = shuffle(arrRandomNumber);
 				
 				relVids.innerHTML = '<div id="col_3"> <div id="LIASS_' + randomSrc[0] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[0] + '.png" data-video="videos/LIASS_' + randomSrc[0] + '.mp4"></div><div id="LIASS_' + randomSrc[1] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[1] + '.png" data-video="videos/LIASS_' + randomSrc[1] + '.mp4"></div><div id="LIASS_' + randomSrc[2] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[2] + '.png" data-video="videos/LIASS_' + randomSrc[2] + '.mp4"></div> </div>';
 
 				hideVideo();
 
 			} else if (relVids.className == "col_6" ) {
+
+				var randomSrc = shuffle(arrRandomNumber);
 				
 				relVids.innerHTML = '<div id="col_3"> <div id="LIASS_' + randomSrc[0] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[0] + '.png" data-video="videos/LIASS_' + randomSrc[0] + '.mp4"></div><div id="LIASS_' + randomSrc[1] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[1] + '.png" data-video="videos/LIASS_' + randomSrc[1] + '.mp4"></div><div id="LIASS_' + randomSrc[2] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[2] + '.png" data-video="videos/LIASS_' + randomSrc[2] + '.mp4"></div><div id="LIASS_' + randomSrc[3] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[3] + '.png" data-video="videos/LIASS_' + randomSrc[3] + '.mp4"></div><div id="LIASS_' + randomSrc[4] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[4] + '.png" data-video="videos/LIASS_' + randomSrc[4] + '.mp4"></div><div id="LIASS_' + randomSrc[5] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[5] + '.png" data-video="videos/LIASS_' + randomSrc[5] + '.mp4"></div> </div>';
 
@@ -164,24 +166,24 @@ $(window).on('load', function() {
 		// If counter hits 5, show up next
 		
 
-		// function timesWatched() {
+		function timesWatched() {
 
-		// 	var watchCount = 0;
-		// 	var vid = document.getElementById('LIASS');
+			var watchCount = 0;
+			var vid = document.getElementById('LIASS');
 
-		// 	vid.addEventListener("ended", function() {
+			vid.addEventListener("ended", function() {
 
-		// 		watchCount++;
+				watchCount++;
 
-		// 	    if (watchCount > 5 ) {	
-		// 	    	window.location.href = "one-year-performance.html";
-		// 	    }
-		// 	}, true);
-		// 	// what is the diffence between true and false?
+			    if (watchCount > 5 ) {	
+			    	window.location.href = "one-year-performance.html";
+			    }
+			}, true);
+			// what is the diffence between true and false?
 
-		// }
+		}
 
-		// timesWatched();
+		timesWatched();
 
 
 
@@ -189,3 +191,4 @@ $(window).on('load', function() {
 
 
 // console.log ("great job team!")
+console.log ("show me the ZUUUUUCC")
