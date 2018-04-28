@@ -154,15 +154,16 @@ $(window).on('load', function() {
 			var relVids = document.getElementById('related_videos');
 			relVids.style.visibility = 'visible'; // making it visibile
 			relVids.className = templateLIASS; // setting class
+			// relVids.className = "col_2";
 			relVids.innerHTML = ""; // clearing related_videos div
 			// var randomSrc = getRandomNumber[Math.floor(Math.random() * getRandomNumber.length)];
 
-			// function shuffle(o) {
-			//     for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-			//     return o;
-			// }
+				function shuffle(o) {
+				    for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+				    return o;
+				}
 
-			// var randomSrc = shuffle(getRandomNumber);
+				var randomSrc = shuffle(getRandomNumber);
 
 
 			console.log( templateLIASS );
@@ -174,7 +175,7 @@ $(window).on('load', function() {
 
 			if ( relVids.className == "col_2" ) {
 
-				relVids.innerHTML = '<div id="col_2"> <div id="LIASS_' + randomSrc + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc + '.png" data-video="videos/LIASS_' + randomSrc + '.mp4"></div><div id="LIASS_' + randomSrc + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc + '.png" data-video="videos/LIASS_' + randomSrc + '.mp4"></div> </div>';
+				relVids.innerHTML = '<div id="col_2"> <div id="LIASS_' + randomSrc[0] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[0] + '.png" data-video="videos/LIASS_' + randomSrc[0] + '.mp4"></div><div id="LIASS_' + randomSrc[1] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[1] + '.png" data-video="videos/LIASS_' + randomSrc[1] + '.mp4"></div> </div>';
 
 				console.log (relVids.innerHTML);
 				console.log ( randomSrc );
@@ -182,11 +183,11 @@ $(window).on('load', function() {
 
 			} else if ( relVids.className == "col_3" ) {
 				
-				relVids.innerHTML = '<div id="col_3"> <div id="LIASS_' + randomSrc + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc + '.png" data-video="videos/LIASS_' + randomSrc + '.mp4"></div><div id="LIASS_' + randomSrc + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc + '.png" data-video="videos/LIASS_' + randomSrc + '.mp4"></div><div id="LIASS_' + randomSrc + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc + '.png" data-video="videos/LIASS_' + randomSrc + '.mp4"></div> </div>';
+				relVids.innerHTML = '<div id="col_3"> <div id="LIASS_' + randomSrc[0] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[0] + '.png" data-video="videos/LIASS_' + randomSrc[0] + '.mp4"></div><div id="LIASS_' + randomSrc[1] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[1] + '.png" data-video="videos/LIASS_' + randomSrc[1] + '.mp4"></div><div id="LIASS_' + randomSrc[2] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[2] + '.png" data-video="videos/LIASS_' + randomSrc[2] + '.mp4"></div> </div>';
 
 			} else if (relVids.ClassName == "col_6" ) {
 				
-				relVids.innerHTML = '<div id="col_3"> <div id="LIASS_' + randomSrc + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc + '.png" data-video="videos/LIASS_' + randomSrc + '.mp4"></div><div id="LIASS_' + randomSrc + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc + '.png" data-video="videos/LIASS_' + randomSrc + '.mp4"></div><div id="LIASS_' + randomSrc + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc + '.png" data-video="videos/LIASS_' + randomSrc + '.mp4"></div><div id="LIASS_' + randomSrc + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc + '.png" data-video="videos/LIASS_' + randomSrc + '.mp4"></div><div id="LIASS_' + randomSrc + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc + '.png" data-video="videos/LIASS_' + randomSrc + '.mp4"></div><div id="LIASS_' + randomSrc + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc + '.png" data-video="videos/LIASS_' + randomSrc + '.mp4"></div> </div>';
+				relVids.innerHTML = '<div id="col_3"> <div id="LIASS_' + randomSrc[0] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[0] + '.png" data-video="videos/LIASS_' + randomSrc[0] + '.mp4"></div><div id="LIASS_' + randomSrc[1] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[1] + '.png" data-video="videos/LIASS_' + randomSrc[1] + '.mp4"></div><div id="LIASS_' + randomSrc[2] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[2] + '.png" data-video="videos/LIASS_' + randomSrc[2] + '.mp4"></div><div id="LIASS_' + randomSrc[3] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[3] + '.png" data-video="videos/LIASS_' + randomSrc[3] + '.mp4"></div><div id="LIASS_' + randomSrc[4] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[4] + '.png" data-video="videos/LIASS_' + randomSrc[4] + '.mp4"></div><div id="LIASS_' + randomSrc[5] + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomSrc[5] + '.png" data-video="videos/LIASS_' + randomSrc[5] + '.mp4"></div> </div>';
 
 
 			} else {
@@ -197,15 +198,6 @@ $(window).on('load', function() {
 			}
 
 		}
-
-
-// <div id="LIASS_' + randomNumber + '" class="thumbnail"><img src="images/LIASS_PIC_' + randomNumber + '.png" data-video="videos/LIASS_' + randomNumber + '.mp4"></div>
-
-
-// <div id="LIASS_00" class="thumbnail"><img src="' + thumbLIASS + '"></div>
-
-				// relVids.innerHTML = document.getElementById('two_up').innerHTML;
-				// document.getElementById('blank').appendChild(relVids);
 
 
 		// UP NEXT (going to next page)
